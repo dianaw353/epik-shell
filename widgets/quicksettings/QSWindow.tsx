@@ -60,7 +60,7 @@ function Header() {
 
   return (
     <box hexpand={false} cssClasses={["header"]} spacing={6}>
-      <label label={"Quick Setting"} hexpand xalign={0} />
+      <label label={"Quick Settings"} hexpand xalign={0} />
       <button
         onClicked={() => {
           App.toggle_window(WINDOW_NAME);
@@ -146,7 +146,7 @@ function WifiArrowButton() {
     [bind(wifi, "state"), bind(wifi, "ssid")],
     (state, ssid) => {
       return state == AstalNetwork.DeviceState.ACTIVATED
-        ? ssid
+        ? ssid.substring(0, 7)
         : AstalNetwork.device_state_to_string();
     },
   );
@@ -173,7 +173,7 @@ function BluetoothArrowButton() {
     [bind(bluetooth, "devices"), bind(bluetooth, "isConnected")],
     (d, _) => {
       for (const device of d) {
-        if (device.connected) return device.name;
+        if (device.connected) return device.name.substring(0, 7);
       }
       return "No device";
     },
