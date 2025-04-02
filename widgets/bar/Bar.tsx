@@ -23,6 +23,7 @@ const panelButton = {
   notification: () => <NotifPanelButton />,
   network_speed: () => <NetworkSpeedPanelButton />,
   quicksetting: () => <QSPanelButton />,
+  tray: () => <TrayPanelButton />,
 };
 
 function Start() {
