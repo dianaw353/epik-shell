@@ -87,10 +87,10 @@ You can check some configurations in the [wiki](https://github.com/ezerinz/epik-
     "position": "top", // "top" | "bottom"
     "separator": true,
     // modules to show in start, center, and end of bar.
-    // available options: "launcher", "workspace", "time", "notification", "network_speed", "quicksetting"
+    // available options: "launcher", "workspace", "time", "notification", "tray", "network_speed", "quicksetting"
     "start": ["launcher", "workspace"],
     "center": ["time", "notification"],
-    "end": ["network_speed", "quicksetting"],
+    "end": ["tray", "network_speed", "quicksetting"],
   },
   "desktop_clock": {
     "position": "top_left", // "top_left" | "top" | "top_right" | "left" | "center" | "right" | "bottom_left" | "bottom" | "bottom_right"
